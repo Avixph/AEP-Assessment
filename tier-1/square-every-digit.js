@@ -3,7 +3,7 @@
 @returns {number}
 */
 module.exports = function(num){
-  console.log(num)
+  // console.log(num)
   let numStr = num.toString()
   let res = ""
   for (const n of numStr) {
