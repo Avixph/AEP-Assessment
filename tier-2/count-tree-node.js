@@ -17,5 +17,24 @@
 */
 
 module.exports = function(list){
-  //Solution goes here
+  if (list === null) {
+    return 0
+  }
+
+  let count = 0
+  let queue = [list]
+
+  while (queue.length > 0) {
+    let node = queue.shift()
+    count++
+    if (node.left !== null) {
+      queue.push(node.left)
+    }
+    if (node.right !== null) {
+      queue.push(node.right)
+    }
+  }
+
+  return count
 }
+
